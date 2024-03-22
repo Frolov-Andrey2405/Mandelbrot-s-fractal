@@ -26,3 +26,4 @@ pyflakes
 # Required modules
 pygame
 numpy
+numba
