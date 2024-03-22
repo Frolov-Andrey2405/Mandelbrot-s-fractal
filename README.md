@@ -25,9 +25,7 @@ does not diverge to infinity.
 
 Mathematically, the Mandelbrot set $M$ can be defined as:
 
-\[
-M = \{c \in \mathbb{C} \mid \{z_n\}_{n=0}^\infty \text{ is bounded, where } z_0 = 0 \text{ и } z_{n+1} = z_n^2 + c\}
-\]
+![Formula](app/img/readme/Formula.png)
 
 The boundary of the Mandelbrot set is a fractal curve with an infinitely complex structure, exhibiting self-similarity at all scales. This means that zooming in on any part of the boundary reveals similar patterns and shapes as the overall set.
 
