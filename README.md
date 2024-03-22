@@ -8,6 +8,8 @@ Fractals are infinitely complex patterns that are self-similar across different 
 
 The Mandelbrot set is a famous fractal set in the field of complex numbers. It is a subset of the complex plane, defined by the behavior of a particular complex function under iteration. The Mandelbrot set is named after the mathematician Benoit Mandelbrot, who studied and popularized fractals.
 
+![Pixel Mandelbrot](app/img/sreenshots/pixel.png)
+
 The Mandelbrot set is defined by the following complex quadratic function: $f(z) = z^2 + c$
 
 where:
@@ -41,3 +43,36 @@ where:
 Complex numbers can be represented on a complex plane, where the real part ($a$) is plotted on the horizontal axis ($x$-axis), and the imaginary part ($b$) is plotted on the vertical axis ($y$-axis). The complex plane allows for geometric interpretations and operations involving complex numbers.
 
 ![Complex numbers](./app/img/readme/complex_numbers.png)
+
+## Mandelbrot Fractal Generator
+
+The `main.py` script provided in this repository generates and displays a Mandelbrot fractal using the Python programming language and libraries such as Numpy and Pygame.
+
+### Description
+
+The `main.py` script defines classes and functions to construct and render the Mandelbrot fractal. Here's a brief overview of the key components:
+
+- `Color`: A dataclass representing a color in RGB format.
+- `Renderable` (Abstract Base Class): An abstract base class for objects that can be rendered and drawn.
+- `Fractal`: A class that renders the Mandelbrot fractal to a numpy array and can draw it to a screen.
+- `App`: The main application class that runs the fractal render loop.
+
+### Functionality
+
+The `Fractal` class utilizes Numba for performance optimization in rendering the fractal. It defines methods to generate the Mandelbrot set based on the Mandelbrot iteration algorithm. The `App` class sets up the Pygame window and handles the main loop for rendering and displaying the fractal.
+
+### Demonstration
+
+To run the script and see the Mandelbrot fractal in action:
+
+1. Ensure you have Python installed on your system.
+2. Install the required libraries by running `python -m pip install -r requirements.txt` in your terminal.
+3. Execute the `main.py` script.
+4. The Pygame window will display the rendered Mandelbrot fractal, allowing you to explore its intricate details and self-similar patterns.
+
+
+## Screenshots
+
+Screenshot of the result showing the visualization of the Mandelbrot fractal:
+
+![Textured Mandelbrot](app/img/sreenshots/colored.png)
