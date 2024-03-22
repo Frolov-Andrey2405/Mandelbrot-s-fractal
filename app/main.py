@@ -3,10 +3,15 @@ import numpy as np
 import math
 
 # Settings
-res = width, height = 160, 110
+res = width, height = 800, 450
 offset = np.array([1.3 * width, height]) // 2
 max_iter = 30
 zoom = 2.2 / height
+
+# Texture
+texture = pg.image.load("./img/texture/texture.jpg")
+texture_size = min(texture.get_size()) - 1
+texture_array = pg.surfarray.array3d(texture)
 
 
 class Fractal:
@@ -25,8 +30,8 @@ class Fractal:
                     if abs(z) > 2:
                         break
                     num_iter += 1
-                col = int(225 * num_iter / max_iter)
-                self.screen_array[x, y] = [col, col, col]
+                col = int(texture_size * num_iter / max_iter)
+                self.screen_array[x, y] = texture_array[col, col]
 
     def update(self):
         self.render()
